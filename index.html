@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VM Provisioning</title>
+</head>
+<body>
+    <h1>Create a Virtual Machine</h1>
+    <form action="/create-vm" method="post">
+        <label for="vm_name">VM Name:</label><br>
+        <input type="text" id="vm_name" name="vm_name" required><br><br>
+ 
+        <label for="ip_address">IP Address:</label><br>
+        <input type="text" id="ip_address" name="ip_address" required><br><br>
+ 
+        <label for="cpu">CPU:</label><br>
+        <input type="number" id="cpu" name="cpu" required><br><br>
+ 
+        <label for="memory">Memory (GB):</label><br>
+        <input type="number" id="memory" name="memory" required><br><br>
+ 
+        <label for="storage">Storage Disk (GB):</label><br>
+        <input type="number" id="storage" name="storage" required><br><br>
+ 
+        <label for="owner_email">Owner Email:</label><br>
+        <input type="email" id="owner_email" name="owner_email" required><br><br>
+ 
+        <label for="platform">Platform:</label><br>
+        <select id="platform" name="platform">
+            <option value="azure">Azure</option>
+            <option value="vmware">VMware</option>
+        </select><br><br>
+ 
+        <input type="submit" value="Create VM">
+    </form>
+</body>
+</html>
